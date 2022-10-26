@@ -21,7 +21,7 @@ header {
     align-items: center;
     justify-content: space-between;
     box-shadow: 4px 4px 4px #888888;
-    padding: 1% 10%;
+    padding: 1% 15%;
 }
 
 .logo {
@@ -148,16 +148,107 @@ button:hover {
   to {opacity: 1}
 }
 
-.details {
+.contact, .ot-flex {
   display: flex;
-  margin: 75px auto;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  text-align: left;
 }
 
-.contact-details {
-  text-align: left;
-  margin: 0 20px;
-  line-height: 1.5rem;
+.contact {
+  max-width: 1000px;
+  width:80%;
+  margin: 75px auto;
+}
+
+.map-box {
+  width: 65%;
+}
+
+.contact-box {
+  width: 35%;
+  margin: 0 0 0 60px;
+}
+
+.map {
+  width: 100%;
+}
+
+h4 {
+  font-size: 1.5em;
+  margin: 0 0 20px;
+}
+
+.opening-times > div > p, .address > p {
+  font-size: 1.1em;
+  margin: 0;
+  line-height: 1.7em;
+} 
+
+.address > p {
+  margin-bottom: 40px;
+}
+
+.ot-flex-1 {
+  width: 120px;
+}
+
+@media only screen and (max-width: 900px) {
+  header {
+    padding: 1% 10%;
+  }
+
+  .slideshow-container {
+    width: 85%;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+
+  .map-box {
+    margin: 50px 0;
+    width: 100%;
+  }
+  
+  .contact-box {
+    width: 100%;
+    display: flex;
+    margin: 0;
+  }
+  .address, .opening-times {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  header {
+    padding: 1% 5%;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+  }
+
+  .header-links > p {
+    display: none;
+  }
+
+  .header-links > img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .contact-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .address, .opening-times {
+    width: 100%;
+  }
+
+  .ot-flex {
+    margin-left: 23%;
+  }
 }
