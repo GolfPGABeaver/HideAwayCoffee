@@ -89,6 +89,10 @@ button:hover {
   display: none;
 }
 
+.active {
+  display:initial;
+}
+
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
