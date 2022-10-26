@@ -5,37 +5,42 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-}
-
-a {
-    text-decoration: none;
-    color: #000000;
-}
-
-a:hover {
-    text-decoration: underline;
+    width: 100%;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 4px 4px 4px #888888;
-    padding: 1% 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 4px 4px 4px #888888;
+  padding: 1% 15%;
 }
 
-.logo {
-    width: 200px;
+header > img {
+  width: 150px;
 }
 
-header > div, .header-links {
-    display: flex;
-    align-items: center;
-    font-size: 1.1em;
+header > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000000;
+  width:30%;
 }
 
-.header-links > img {
-    margin: 0 10px 0 30px;
+header a:hover {
+  text-decoration: underline;
+  color: #000000;
+}
+
+header > a > img {
+  height: 40px;
+  width: auto;
+}
+
+header > a > p {
+  margin: 0 10px
 }
 
 main {
@@ -76,80 +81,9 @@ button:hover {
     background-color: #333333dd; 
 }
 
-/* Slideshow container */
-.slideshow-container {
+#carouselExampleIndicators {
+  margin: 50px auto;
   max-width: 1000px;
-  width:80%;
-  position: relative;
-  margin: 50px auto 0;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-.active {
-  display:initial;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 49%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: #000000;
-  font-weight: bold;
-  font-size: 30px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: -50px;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev {
-  left: -50px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  color: #555555;
-  font-size: 25px;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #000000;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: slide;
-  animation-duration: 1s;
-}
-
-@keyframes slide {
-  from {opacity: 0.8}
-  to {opacity: 1}
 }
 
 .contact, .ot-flex {
@@ -179,6 +113,7 @@ button:hover {
 h4 {
   font-size: 1.5em;
   margin: 0 0 20px;
+  font-weight: 800;
 }
 
 .opening-times > div > p, .address > p {
@@ -195,64 +130,14 @@ h4 {
   width: 120px;
 }
 
-@media only screen and (max-width: 900px) {
-  header {
-    padding: 1% 10%;
-  }
+@media screen and (max-width: 900px) {
 
-  .slideshow-container {
-    width: 85%;
-  }
-
-  .contact {
-    display: flex;
-    flex-direction: column;
-    flex-flow: column-reverse;
-  }
-
-  .map-box {
-    margin: 50px 0;
-    width: 100%;
-  }
-  
-  .contact-box {
-    width: 100%;
-    display: flex;
-    margin: 0;
-  }
-  .address, .opening-times {
-    width: 50%;
-  }
 }
 
-@media only screen and (max-width: 720px) {
-  header {
-    padding: 1% 5%;
-  }
-  
-  h1 {
-    font-size: 2.5em;
-  }
+@media screen and (max-width: 720px) {
 
-  .header-links > p {
-    display: none;
-  }
+}
 
-  .header-links > img {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .contact-box {
-    flex-direction: column;
-    text-align: center;
-  }
+@media screen and (max-width: 450px) {
 
-  .address, .opening-times {
-    width: 100%;
-  }
-
-  .ot-flex {
-    margin-left: 23%;
-  }
 }
