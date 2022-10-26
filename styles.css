@@ -26,7 +26,7 @@ header > a {
   justify-content: center;
   text-decoration: none;
   color: #000000;
-  width:30%;
+  width:32%;
 }
 
 header a:hover {
@@ -34,13 +34,14 @@ header a:hover {
   color: #000000;
 }
 
-header > a > img {
+header > a > svg {
   height: 40px;
   width: auto;
 }
 
 header > a > p {
-  margin: 0 10px
+  margin: 0 10px;
+  font-size: 1.3em;
 }
 
 main {
@@ -59,7 +60,7 @@ h2 {
     margin: 6px;
 }
 
-main > p {
+main > div > p {
     font-size: 1.2em;
     margin: 6px;
 }
@@ -86,28 +87,35 @@ button:hover {
   max-width: 1000px;
 }
 
-.contact, .ot-flex {
-  display: flex;
-  text-align: left;
+.carousel-control-prev, .carousel-control-next {
+  height: 50px;
+  width: 50px;
+  top: 45%;
 }
 
-.contact {
+.carousel-control-next-icon, .carousel-control-prev-icon  {
+  width: 100px;
+}
+
+section {
+  display: flex;
+  text-align: left;
   max-width: 1000px;
   width:80%;
   margin: 75px auto;
 }
 
-.map-box {
+.map {
   width: 65%;
+}
+
+.map-frame {
+  width: 100%;
 }
 
 .contact-box {
   width: 35%;
   margin: 0 0 0 60px;
-}
-
-.map {
-  width: 100%;
 }
 
 h4 {
@@ -126,18 +134,83 @@ h4 {
   margin-bottom: 40px;
 }
 
+.ot-flex {
+  display: flex;
+  text-align: left;
+}
+
 .ot-flex-1 {
   width: 120px;
 }
 
-@media screen and (max-width: 900px) {
+footer {
+  background-color: #f9f9f9;
+  padding: 20px 0 10px;
+}
 
+footer > p {
+  font-size: 1.1em;
+  margin: 0;
+}
+
+footer > i, footer > i > a {
+  font-size: 0.9em;
+  color: #777777;
+  text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 900px) {
+  header {
+    padding: 1% 2%;
+  }
+
+  section {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .map {
+    width: 100%;
+  }
+
+  .contact-box {
+    display: flex;
+    width: 100%;
+    margin: 0 auto 50px;
+    justify-content: space-around;
+  }
+  
 }
 
 @media screen and (max-width: 720px) {
+  header {
+    padding: 1%;
+  }
 
+  header > a > p {
+    display:none;
+  }
+
+  main {
+    margin: 50px 0;
+  }
+
+  section {
+    width: 100%;
+  }
+  .contact-box {
+    flex-direction: column;
+  }
+
+  .ot-flex {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 450px) {
-
+  main {
+    margin: 25px 0;
+  }
 }
